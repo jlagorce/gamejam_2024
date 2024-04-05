@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://2jeq5br2y3bc" path="res://images/V2_plateforme.png" id="2_lrmc7"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player.tscn" id="2_pc4bb"]
-[ext_resource type="PackedScene" path="res://objects/Ennemi.tscn" id="3_em1ky"]
+[ext_resource type="PackedScene" uid="uid://c8bhlkpkp0xed" path="res://objects/Ennemi.tscn" id="3_em1ky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okr70"]
 texture = ExtResource("2_lrmc7")
@@ -154,11 +154,11 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_okr70")
 
-[node name="monde_test" type="Node2D"]
+[node name="monde_test2" type="Node2D"]
 scale = Vector2(1.003, 1.0048)
 
 [node name="player" parent="." instance=ExtResource("2_pc4bb")]
-position = Vector2(575, 198)
+position = Vector2(591.226, 325.438)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(478.562, 307.525)
@@ -175,4 +175,4 @@ layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(-131052, 131076, 0, -131051, 131076, 0, 131110, 131076, 0, 131109, 131076, 0, 131108, 131076, 0, -65489, 131076, 0, -65490, 131076, 0, -65491, 131076, 0, 196639, 131076, 0, 196638, 131076, 0, 196637, 131076, 0, -458741, 131076, 0, -458740, 131076, 0, -458739, 131076, 0)
 
 [node name="Ennemi" parent="." instance=ExtResource("3_em1ky")]
-position = Vector2(2656.02, 137.341)
+position = Vector2(2602.19, 134.355)
