@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://e1j0nxxccxly"]
+[gd_scene load_steps=4 format=3 uid="uid://dbhitytvef6ra"]
 
 [ext_resource type="PackedScene" uid="uid://b3vpdysqa0wja" path="res://objects/plateform.tscn" id="1_f3d0g"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player.tscn" id="2_ytbtf"]
-[ext_resource type="PackedScene" uid="uid://885i6e52rptk" path="res://objects/Objet_l.tscn" id="3_25qp8"]
+[ext_resource type="PackedScene" path="res://objects/Objet_l.tscn" id="3_25qp8"]
 
 [node name="monde_test" type="Node2D"]
 
