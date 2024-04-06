@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dolufq8n4hbh2"]
 
-[ext_resource type="Script" path="res://scripts/sc_player.gd" id="1_0hykx"]
+[ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_bicvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hngx8"]
@@ -16,3 +16,6 @@ texture = ExtResource("1_bicvi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 0.5)
 shape = SubResource("RectangleShape2D_hngx8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
