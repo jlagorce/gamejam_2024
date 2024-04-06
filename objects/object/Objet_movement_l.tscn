@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://de7cydkrs33hc"]
+[gd_scene load_steps=6 format=3 uid="uid://de7cydkrs33hc"]
 
-[ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_i2k0h"]
+[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="1_36uce"]
 
 [sub_resource type="GDScript" id="GDScript_i6gjl"]
 script/source = "extends Node2D
@@ -28,6 +28,21 @@ func _on_area_2d_body_entered(body):
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1gqg"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qhik"]
+atlas = ExtResource("1_36uce")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gimdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qhik")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Objet_movement" type="Node2D"]
 script = SubResource("GDScript_i6gjl")
 
@@ -36,8 +51,8 @@ script = SubResource("GDScript_i6gjl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_n1gqg")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(4, 2)
-texture = ExtResource("1_i2k0h")
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_gimdd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
