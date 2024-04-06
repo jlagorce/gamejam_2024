@@ -6,7 +6,7 @@ extends CharacterBody2D
 const SPEED = 30000
 const JUMP_VELOCITY = 36000
 # Double saut
-const TIME_DOUBLE_JUMP = 0.5
+const TIME_DOUBLE_JUMP = 0.1
 const NB_JUMP = 1
 # Dash
 const DASH_VELOCITY = 2000000
@@ -35,7 +35,7 @@ var dash_remain = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tile_map = get_tree().get_root().get_node("monde_test2/TileMap")
+	tile_map = get_tree().get_root().get_node("monde/TileMap")
 
 func _physics_process(delta):
 	manage_moves(delta)
