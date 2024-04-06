@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_oh7f8"]
 [ext_resource type="Texture2D" uid="uid://cq8f8qou15ocd" path="res://images/Plateforme_monde_alternatif.png" id="2_1xv6j"]
 [ext_resource type="Texture2D" uid="uid://bxjvpk3sc5em6" path="res://images/V2_plateforme.png" id="2_5pbch"]
-[ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_l.tscn" id="3_34700"]
-[ext_resource type="Texture2D" uid="uid://78fa3n5wsdll" path="res://images/pano.png" id="3_xo5a1"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_gravity_l.tscn" id="3_34700"]
+[ext_resource type="Texture2D" path="res://images/pano.png" id="3_xo5a1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmaap"]
 texture = ExtResource("2_1xv6j")
