@@ -6,7 +6,7 @@ extends CharacterBody2D
 const SPEED = 30000
 const JUMP_VELOCITY = 36000
 # Double saut
-const TIME_DOUBLE_JUMP = 0.5
+const TIME_DOUBLE_JUMP = 0.1
 const NB_JUMP = 1
 # Dash
 const DASH_VELOCITY = 2000000
