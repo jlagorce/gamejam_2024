@@ -18,6 +18,8 @@ const TIME_SWITCH_WORLD = 3
 
 var pouvoir = ""
 # Variables
+var Frame = ["Normal","Parallele"]
+var NbFrame = 0
 # Gravity
 var gravity_orient = 1
 var timer_gravity_switch = -1
@@ -44,6 +46,7 @@ var Sprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var Global = get_node("/root/Global")
+	Global.respawn_position = position
 	Sprite = get_node("AnimatedSprite2D")
 	tile_map = get_tree().get_root().get_node("monde/TileMap")
 	for node in get_children():
@@ -56,6 +59,7 @@ func _ready():
 		if node.name == "saut_fin":
 			saut_fin = node
 	world_power()
+	
 
 func _physics_process(delta):
 	manage_moves(delta)
@@ -66,7 +70,11 @@ func _physics_process(delta):
 func animation():
 	if is_on_floor():
 		if velocity.x != 0:
-			Sprite.play("Run")
+			Sprite.play(Frame[NbFrame]+"Run")
+		else:
+			Sprite.play(Frame[NbFrame]+"Idle")
+	else:
+		Sprite.play(Frame[NbFrame]+"Idle")
 	if velocity.x > 0:
 		Sprite.scale.x = 4
 	elif velocity.x < 0:
@@ -132,6 +140,7 @@ func switch_world(delta):
 		tile_map.set_layer_enabled(2, not tile_map.is_layer_enabled(2))
 		tile_map.set_layer_enabled(3, not tile_map.is_layer_enabled(3))
 		timer_switch_world = TIME_SWITCH_WORLD/delta
+		NbFrame=(NbFrame+1) % 2
 	elif timer_switch_world > 0:
 		timer_switch_world -= 1
 		
@@ -169,16 +178,14 @@ func manage_switch_gravity(delta):
 		timer_gravity_switch -= 1
 
 func respawn_player():
-	if Global.current_level == 1:
-		position.x = Global.X_POS_NIV1
-		position.y = Global.Y_POS_NIV1
-	elif Global.current_level == 2:
-		position.x = Global.X_POS_NIV2
-		position.y = Global.Y_POS_NIV2
-	elif Global.current_level == 3:
-		position.x = Global.X_POS_NIV3
-		position.y = Global.Y_POS_NIV3
+	position = Global.respawn_position
 
 func check_death():
 	if position.y > 5000 or Input.get_action_strength("respawn") == 1:
+		respawn_player()
+
+
+func _on_area_2d_body_entered(body):
+	print(body.name)
+	if body.name ==  "TileMap":
 		respawn_player()

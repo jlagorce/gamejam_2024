@@ -1,11 +1,7 @@
 extends Node
 
-const X_POS_NIV1 = 1058.82
-const Y_POS_NIV1 = 101.513
-const X_POS_NIV2 = 606.181
-const Y_POS_NIV2 = 226.911
-const X_POS_NIV3 = 1022.93
-const Y_POS_NIV3 = -75.637
+
+var respawn_position = Vector2.ZERO
 
 var current_level = 1
 var power = ""

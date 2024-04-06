@@ -12,8 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print(Global.power)
-	if true or Global.power == "world":
+	if Global.power == "world":
 		if Input.is_action_just_pressed("switch_world"):
 			NbFrame=(NbFrame+1) % 2
 			play(Frame[NbFrame])

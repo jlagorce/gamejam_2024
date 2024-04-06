@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dolufq8n4hbh2"]
+[gd_scene load_steps=15 format=3 uid="uid://dolufq8n4hbh2"]
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
@@ -9,6 +9,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v88gk"]
 size = Vector2(57, 108)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jytab"]
+atlas = ExtResource("4_siybd")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6d1fj"]
 atlas = ExtResource("4_siybd")
 region = Rect2(0, 0, 32, 32)
@@ -17,8 +21,28 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("4_siybd")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nmu0"]
+atlas = ExtResource("4_siybd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cme45"]
+atlas = ExtResource("4_siybd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2kcp"]
+atlas = ExtResource("4_siybd")
+region = Rect2(32, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6vfxq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jytab")
+}],
+"loop": true,
+"name": &"NormalIdle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6d1fj")
@@ -27,9 +51,30 @@ animations = [{
 "texture": SubResource("AtlasTexture_ney1y")
 }],
 "loop": true,
-"name": &"Run",
+"name": &"NormalRun",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nmu0")
+}],
+"loop": true,
+"name": &"ParalleleIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cme45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2kcp")
+}],
+"loop": true,
+"name": &"ParalleleRun",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dud1d"]
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_0hykx")
@@ -50,7 +95,7 @@ panning_strength = 2.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_6vfxq")
-animation = &"Run"
+animation = &"NormalRun"
 
 [node name="saut_debut" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_02ynv")
@@ -61,3 +106,10 @@ panning_strength = 2.0
 stream = ExtResource("5_0vhur")
 volume_db = 16.0
 panning_strength = 2.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dud1d")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
