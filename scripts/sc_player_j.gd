@@ -89,7 +89,7 @@ func manage_moves(delta):
 
 func manage_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
-		if is_on_floor() or is_on_ceiling():
+		if (is_on_floor() or is_on_ceiling()) and timer_jump <= 0:
 			update_y_velocity(delta)
 			timer_jump = TIME_ENTER_JUMP/delta
 	elif timer_jump > 0:
