@@ -14,7 +14,7 @@ var in_transition = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	parent = get_parent().get_child(1).get_children()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,3 +23,4 @@ func _process(delta):
 			if node.name == "ambiance":
 				if node.has_stream_playback() == false:
 					node.play()
+	

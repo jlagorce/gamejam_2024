@@ -22,9 +22,7 @@ func _physics_process(delta):
 	#print(player.position)
 	var playPos=player.position
 	var vectEnPL=playPos-position
-	print(\"EN\"+str(vectEnPL))
 	if vectEnPL.x*vectEnPL.x+vectEnPL.y*vectEnPL.y<SENSIBILITY*SENSIBILITY:
-		print(\"EN:Poursuite\")
 		if deplacementMode==1:
 			velocity=playPos-position
 			#print(velocity)

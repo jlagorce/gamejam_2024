@@ -19,6 +19,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body == player:
+		Global.in_transition = true
 		Global.power = \"world\"
 		Global.current_level += 1
 		get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")

@@ -10,7 +10,7 @@ var player
 func _ready():
 	player = get_tree().get_root().get_node(\"monde/player\")# Replace with function body.
 	var Global = get_node(\"/root/Global\")
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -19,6 +19,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body == player:
+		Global.in_transition = true
 		Global.power = \"movement\"
 		Global.current_level += 1
 		get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")

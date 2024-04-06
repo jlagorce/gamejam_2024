@@ -4,8 +4,9 @@
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
 [ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v88gk"]
-size = Vector2(57, 108)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rbsgt"]
+radius = 64.0
+height = 128.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6d1fj"]
 atlas = ExtResource("4_siybd")
@@ -33,8 +34,7 @@ animations = [{
 script = ExtResource("1_0hykx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11.5, 10)
-shape = SubResource("RectangleShape2D_v88gk")
+shape = SubResource("CapsuleShape2D_rbsgt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)

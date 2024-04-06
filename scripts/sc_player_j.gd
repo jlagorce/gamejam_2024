@@ -29,7 +29,6 @@ var pas = null
 var timer_switch_world = -1
 
 # Mouvements
-var all_moves = true
 # Double saut
 var jump_remaining = 1
 var timer_double_jump = -1
@@ -60,6 +59,7 @@ func animation():
 		Sprite.scale.x = 4
 	elif velocity.x < 0:
 		Sprite.scale.x = -4
+		
 func gravity_power():
 	pouvoir = "gravity"
 	
@@ -70,6 +70,8 @@ func movement_power():
 	pouvoir = "movement"
 
 func manage_moves(delta):
+	manage_gravity(delta)
+	manage_side_moves(delta)
 	match Global.power:
 		"gravity":
 			manage_switch_gravity(delta)
@@ -79,15 +81,13 @@ func manage_moves(delta):
 			manage_jump(delta)
 		"movement":
 			manage_double_jump(delta)
+			manage_dash(delta)
 		_:
 			manage_jump(delta)
-	manage_gravity(delta)
-	manage_side_moves(delta)
-	manage_dash(delta)
 
 func manage_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
-		if is_on_floor():
+		if is_on_floor() or is_on_ceiling():
 			update_y_velocity(delta)
 		
 func manage_double_jump(delta):
@@ -107,7 +107,7 @@ func update_y_velocity(delta):
 	velocity.y -= JUMP_VELOCITY * gravity_orient * delta
 
 func switch_world(delta):
-	if Input.is_action_just_pressed("switch_world") and timer_switch_world <= 0:
+	if Input.is_action_just_pressed("switch_world"):
 		tile_map.set_layer_enabled(2, not tile_map.is_layer_enabled(2))
 		tile_map.set_layer_enabled(3, not tile_map.is_layer_enabled(3))
 		timer_switch_world = TIME_SWITCH_WORLD/delta
@@ -119,14 +119,14 @@ func manage_gravity(delta):
 
 func manage_side_moves(delta):
 	velocity.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))*delta*SPEED
-	if velocity.x != 0 and is_on_floor():
+	if velocity.x != 0 and (is_on_floor() or is_on_ceiling()):
 		if not pas.has_stream_playback():
 			pas.play()
 	else:
 		pas.stop()
 	
 func manage_dash(delta):
-	if Input.get_action_strength("dash") == 1 and all_moves == true and dash_remain > 0:
+	if Input.get_action_strength("dash") == 1 and dash_remain > 0:
 		if velocity.x > 0:
 			velocity.x += DASH_VELOCITY * delta
 			dash_remain -= 1
