@@ -2,13 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
-=======
 [ext_resource type="AudioStream" uid="uid://drh51fn8d7dqd" path="res://sound/saut_debut.wav" id="4_02ynv"]
 [ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
 [ext_resource type="AudioStream" uid="uid://bd4ljc1awiobx" path="res://sound/saut_fin.wav" id="5_0vhur"]
->>>>>>> 3d08b6b17d242eab7d61f5993ef93988b47866d1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v88gk"]
 size = Vector2(57, 108)
