@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c27o12rxlgi14"]
+[gd_scene load_steps=11 format=3 uid="uid://c27o12rxlgi14"]
 
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_m4533"]
 [ext_resource type="Texture2D" uid="uid://cq8f8qou15ocd" path="res://images/Plateforme_monde_alternatif.png" id="2_d0i1u"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="4_o168a"]
 [ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="5_jrnyg"]
 [ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="6_cm0ph"]
+[ext_resource type="AudioStream" uid="uid://qj7phxidw1y" path="res://sound/ambiances.wav" id="7_fpl17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k32un"]
 texture = ExtResource("2_d0i1u")
@@ -235,3 +236,7 @@ position = Vector2(8546.36, 226.911)
 
 [node name="Objet_world" parent="." instance=ExtResource("6_cm0ph")]
 position = Vector2(4372.88, -4317.28)
+
+[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fpl17")
+volume_db = 6.0
