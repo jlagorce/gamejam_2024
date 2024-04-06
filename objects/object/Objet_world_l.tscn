@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtm1ufpmc5ggr"]
+[gd_scene load_steps=4 format=3 uid="uid://bqc3x0n3osyg2"]
 
-[ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_15u8n"]
+[ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_y55g6"]
 
-[sub_resource type="GDScript" id="GDScript_rkngm"]
+[sub_resource type="GDScript" id="GDScript_i6gjl"]
 script/source = "extends Node2D
 
 var player
@@ -19,7 +19,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body == player:
-		Global.power = \"gravity\"
+		Global.power = \"world\"
 		Global.current_level += 1
 		get_tree().change_scene_to_file(\"res://objects/niveau\"+str(Global.current_level)+\".tscn\")
 		print(Global.power)
@@ -28,8 +28,8 @@ func _on_area_2d_body_entered(body):
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1gqg"]
 
-[node name="Objet_gravity" type="Node2D"]
-script = SubResource("GDScript_rkngm")
+[node name="Objet_world" type="Node2D"]
+script = SubResource("GDScript_i6gjl")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -38,6 +38,6 @@ shape = SubResource("CircleShape2D_n1gqg")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(4, 2)
-texture = ExtResource("1_15u8n")
+texture = ExtResource("1_y55g6")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
