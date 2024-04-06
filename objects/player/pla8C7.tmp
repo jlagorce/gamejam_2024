@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_bicvi"]
-[ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
+[ext_resource type="AudioStream" uid="uid://bhk4qrwrugji6" path="res://sound/pas_herbe.wav" id="3_apxb3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hngx8"]
 size = Vector2(127, 127)
@@ -23,5 +23,4 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
 [node name="pas" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_to8f8")
-panning_strength = 2.0
+stream = ExtResource("3_apxb3")

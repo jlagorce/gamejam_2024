@@ -23,6 +23,8 @@ var timer_gravity_switch = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var tile_map = null
 
+var pas = null
+
 # Monde
 var timer_switch_world = -1
 
@@ -38,6 +40,9 @@ var dash_remain = 1
 func _ready():
 	var Global = get_node("/root/Global")
 	tile_map = get_tree().get_root().get_node("monde/TileMap")
+	for node in get_children():
+		if node.name == "pas":
+			pas = node
 	world_power()
 
 func _physics_process(delta):
@@ -81,7 +86,6 @@ func manage_double_jump(delta):
 			timer_double_jump = TIME_DOUBLE_JUMP/delta
 			jump_remaining = NB_JUMP
 		elif timer_double_jump <= 0 and jump_remaining > 0:
-			print(timer_double_jump)
 			velocity.y = 0
 			update_y_velocity(delta)
 			jump_remaining -= 1
@@ -103,7 +107,12 @@ func manage_gravity(delta):
 
 func manage_side_moves(delta):
 	velocity.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))*delta*SPEED
-
+	if velocity.x != 0:
+		if not pas.has_stream_playback():
+			pas.play()
+	else:
+		pas.stop()
+	
 func manage_dash(delta):
 	if Input.get_action_strength("dash") == 1 and all_moves == true and dash_remain > 0:
 		if velocity.x > 0:
