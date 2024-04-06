@@ -133,7 +133,6 @@ position = Vector2(13184.4, -2036.23)
 [node name="Objet_world" parent="." instance=ExtResource("5_2vw8i")]
 position = Vector2(13134.6, 1775.48)
 
-[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1.00082, 1)
+[node name="ambiance" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_iuu23")
 volume_db = 6.0
