@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8bhlkpkp0xed"]
+
+[ext_resource type="Script" path="res://scripts/Paneau.gd" id="1_rilct"]
+[ext_resource type="Texture2D" uid="uid://ctsn3yhjysdeh" path="res://images/parchemin.png" id="2_3fiqp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t73xu"]
+
+[node name="Paneau" type="Area2D"]
+position = Vector2(2, 3)
+script = ExtResource("1_rilct")
+metadata/text = ""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(555, 324)
+scale = Vector2(25.5981, 25.5981)
+shape = SubResource("CircleShape2D_t73xu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 960.0
+offset_top = 648.0
+offset_right = 1047.0
+offset_bottom = 735.0
+scale = Vector2(-8.83209, -8.83209)
+texture = ExtResource("2_3fiqp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 338.0
+offset_top = 193.0
+offset_right = 814.0
+offset_bottom = 460.0
+theme_override_font_sizes/normal_font_size = 25
+text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à remplacer votre jambe…"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 600.0
+offset_top = 409.0
+offset_right = 818.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 25
+text = "Entrée pour fermer"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
