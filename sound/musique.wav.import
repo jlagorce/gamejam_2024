@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bhk4qrwrugji6"
-path="res://.godot/imported/pas_herbe.wav-9499808e674f50f67882a4b2046363a3.sample"
+uid="uid://bclaew28i7bn4"
+path="res://.godot/imported/musique.wav-2ebd77b1cddbc53a1f2dfe60d5952f5a.sample"
 
 [deps]
 
-source_file="res://sound/pas_herbe.wav"
-dest_files=["res://.godot/imported/pas_herbe.wav-9499808e674f50f67882a4b2046363a3.sample"]
+source_file="res://sound/musique.wav"
+dest_files=["res://.godot/imported/musique.wav-2ebd77b1cddbc53a1f2dfe60d5952f5a.sample"]
 
 [params]
 

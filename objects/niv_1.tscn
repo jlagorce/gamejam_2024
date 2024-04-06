@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="3_fk8co"]
 [ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
 [ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
-[ext_resource type="AudioStream" uid="uid://qj7phxidw1y" path="res://sound/ambiances.wav" id="6_iuu23"]
+[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="6_55u5l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okr70"]
 texture = ExtResource("2_ngv0c")
@@ -109,7 +109,7 @@ sources/4 = SubResource("TileSetAtlasSource_okr70")
 scale = Vector2(1.003, 1.0048)
 
 [node name="player" parent="." instance=ExtResource("1_plbdg")]
-position = Vector2(1058.82, 101.513)
+position = Vector2(3252.24, -2853.3)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(478.562, 307.525)
@@ -134,6 +134,7 @@ position = Vector2(13184.4, -2036.23)
 position = Vector2(13134.6, 1775.48)
 
 [node name="ambiance" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1.00082, 1)
-stream = ExtResource("6_iuu23")
+position = Vector2(-5.98205, -10.9475)
+scale = Vector2(1.45551, -0.49578)
+stream = ExtResource("6_55u5l")
 volume_db = 6.0

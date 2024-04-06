@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="5_0rlgu"]
 [ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="6_p33dw"]
 [ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="7_pv8y1"]
-[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="8_w1yqa"]
+[ext_resource type="AudioStream" uid="uid://qj7phxidw1y" path="res://sound/ambiances.wav" id="8_qxr24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmaap"]
 texture = ExtResource("2_5crly")
@@ -245,5 +245,5 @@ position = Vector2(-1952.14, -2734.87)
 
 [node name="ambiance" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(1.0024, 1.01052)
-stream = ExtResource("8_w1yqa")
+stream = ExtResource("8_qxr24")
 volume_db = 6.0

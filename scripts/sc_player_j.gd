@@ -48,6 +48,7 @@ func _ready():
 
 func _physics_process(delta):
 	manage_moves(delta)
+	check_death()
 	move_and_slide()
 	animation()
 
@@ -145,3 +146,18 @@ func manage_switch_gravity(delta):
 		gravity_orient *= -1
 	elif timer_gravity_switch > 0:
 		timer_gravity_switch -= 1
+
+func respawn_player():
+	if Global.current_level == 1:
+		position.x = Global.X_POS_NIV1
+		position.y = Global.Y_POS_NIV1
+	elif Global.current_level == 2:
+		position.x = Global.X_POS_NIV2
+		position.y = Global.Y_POS_NIV2
+	elif Global.current_level == 3:
+		position.x = Global.X_POS_NIV3
+		position.y = Global.Y_POS_NIV3
+
+func check_death():
+	if position.y > 5000 or Input.get_action_strength("respawn") == 1:
+		respawn_player()
