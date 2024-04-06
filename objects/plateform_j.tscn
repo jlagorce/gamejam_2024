@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://tm6rvblaiosh"]
+[gd_scene load_steps=5 format=3 uid="uid://tm6rvblaiosh"]
 
 [ext_resource type="Texture2D" uid="uid://b312rl85d0sr0" path="res://images/plateform_image.png" id="1_l4rxh"]
+[ext_resource type="PackedScene" uid="uid://c8bhlkpkp0xed" path="res://objects/paneau/Paneau.tscn" id="2_usrcp"]
+[ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="3_wg5ew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cap1u"]
 size = Vector2(256.929, 260.979)
@@ -14,3 +16,7 @@ texture = ExtResource("1_l4rxh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_cap1u")
+
+[node name="Paneau" parent="." instance=ExtResource("2_usrcp")]
+
+[node name="player" parent="." instance=ExtResource("3_wg5ew")]
