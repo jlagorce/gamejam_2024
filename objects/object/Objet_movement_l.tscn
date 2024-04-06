@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://de7cydkrs33hc"]
+[gd_scene load_steps=6 format=3 uid="uid://bixupjemegm8f"]
 
-[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="1_36uce"]
+[ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste.png" id="1_36uce"]
 
 [sub_resource type="GDScript" id="GDScript_i6gjl"]
 script/source = "extends Node2D
@@ -22,6 +22,7 @@ func _on_area_2d_body_entered(body):
 		Global.in_transition = true
 		Global.power = \"movement\"
 		Global.current_level += 1
+		print(Global.power)
 		get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")
 		print(Global.power)
 		 # Replace with function body.
