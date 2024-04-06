@@ -215,7 +215,7 @@ scale = Vector2(1.003, 1.0048)
 script = ExtResource("1_c5rdu")
 
 [node name="player" parent="." instance=ExtResource("1_m4533")]
-position = Vector2(4878.36, -186.107)
+position = Vector2(4844.47, -4083.4)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(482.552, 307.524)
