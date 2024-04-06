@@ -1,21 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://dolufq8n4hbh2"]
+[gd_scene load_steps=10 format=3 uid="uid://dolufq8n4hbh2"]
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
-[ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_bicvi"]
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
+[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hngx8"]
 size = Vector2(127, 127)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d1fj"]
+atlas = ExtResource("4_siybd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ney1y"]
+atlas = ExtResource("4_siybd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o57cj"]
+atlas = ExtResource("4_siybd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kko6r"]
+atlas = ExtResource("4_siybd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vfxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d1fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ney1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o57cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kko6r")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_0hykx")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-2, 1)
-texture = ExtResource("1_bicvi")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 0.5)
 shape = SubResource("RectangleShape2D_hngx8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -25,3 +56,8 @@ position_smoothing_enabled = true
 [node name="pas" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_to8f8")
 panning_strength = 2.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_6vfxq")
+animation = &"new_animation"
