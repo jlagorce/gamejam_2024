@@ -107,7 +107,7 @@ func manage_gravity(delta):
 
 func manage_side_moves(delta):
 	velocity.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))*delta*SPEED
-	if velocity.x != 0:
+	if velocity.x != 0 and is_on_floor():
 		if not pas.has_stream_playback():
 			pas.play()
 	else:
