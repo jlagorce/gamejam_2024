@@ -36,6 +36,7 @@ var dash_remain = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var Global = get_node("/root/Global")
 	tile_map = get_tree().get_root().get_node("monde/TileMap")
 	world_power()
 
