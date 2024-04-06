@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b727dd5untoma"]
+[gd_scene load_steps=5 format=3 uid="uid://dfwbt3joujsmi"]
 
-[ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_a2ybd"]
-[ext_resource type="Texture2D" uid="uid://caihbd4edlrcx" path="res://images/V2_plateforme.png" id="2_rhovb"]
+[ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_m4533"]
+[ext_resource type="Texture2D" uid="uid://bxjvpk3sc5em6" path="res://images/V2_plateforme.png" id="2_elt8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okr70"]
-texture = ExtResource("2_rhovb")
+texture = ExtResource("2_elt8s")
 texture_region_size = Vector2i(32, 32)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -104,7 +104,7 @@ sources/4 = SubResource("TileSetAtlasSource_okr70")
 [node name="monde_test2" type="Node2D"]
 scale = Vector2(1.003, 1.0048)
 
-[node name="player" parent="." instance=ExtResource("1_a2ybd")]
+[node name="player" parent="." instance=ExtResource("1_m4533")]
 position = Vector2(2048.85, -36.8232)
 
 [node name="TileMap" type="TileMap" parent="."]
