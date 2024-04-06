@@ -7,6 +7,7 @@ const SPEED = 30000
 const JUMP_VELOCITY = 36000
 # Double saut
 const TIME_DOUBLE_JUMP = 0.1
+const TIME_ENTER_JUMP = 1
 const NB_JUMP = 1
 # Dash
 const DASH_VELOCITY = 1500000
@@ -32,6 +33,7 @@ var timer_switch_world = -1
 # Double saut
 var jump_remaining = 1
 var timer_double_jump = -1
+var timer_jump = -1
 # Dash
 var dash_remain = 1
 var Sprite
@@ -89,6 +91,9 @@ func manage_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
 		if is_on_floor() or is_on_ceiling():
 			update_y_velocity(delta)
+			timer_jump = TIME_ENTER_JUMP/delta
+	elif timer_jump > 0:
+		timer_jump -= 1
 		
 func manage_double_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
