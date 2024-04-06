@@ -212,7 +212,7 @@ sources/0 = SubResource("TileSetAtlasSource_k32un")
 scale = Vector2(1.003, 1.0048)
 
 [node name="player" parent="." instance=ExtResource("1_m4533")]
-position = Vector2(7045.86, -782.245)
+position = Vector2(606.181, 226.911)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(482.552, 307.524)

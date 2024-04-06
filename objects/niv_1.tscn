@@ -134,7 +134,7 @@ position = Vector2(13184.4, -2036.23)
 position = Vector2(13134.6, 1775.48)
 
 [node name="ambiance" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-5.98205, -10.9475)
+position = Vector2(-14.9551, -6.96656)
 scale = Vector2(1.45551, -0.49578)
 stream = ExtResource("6_55u5l")
 volume_db = 6.0
