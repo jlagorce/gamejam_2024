@@ -109,7 +109,7 @@ sources/4 = SubResource("TileSetAtlasSource_okr70")
 scale = Vector2(1.003, 1.0048)
 
 [node name="player" parent="." instance=ExtResource("1_plbdg")]
-position = Vector2(3252.24, -2853.3)
+position = Vector2(910.269, 228.901)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(478.562, 307.525)
@@ -133,6 +133,8 @@ position = Vector2(13184.4, -2036.23)
 [node name="Objet_world" parent="." instance=ExtResource("5_2vw8i")]
 position = Vector2(13134.6, 1775.48)
 
-[node name="ambiance" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_iuu23")
+[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-5.98205, -10.9475)
+scale = Vector2(1.45551, -0.49578)
+stream = ExtResource("6_55u5l")
 volume_db = 6.0
