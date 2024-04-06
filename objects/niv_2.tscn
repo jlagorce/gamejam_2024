@@ -223,6 +223,7 @@ scale = Vector2(4.7708, 5.50959)
 tile_set = SubResource("TileSet_b6rl2")
 format = 2
 layer_0/name = "pg"
+layer_0/tile_data = PackedInt32Array(655357, 131076, 0)
 layer_1/name = "bg"
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array()
