@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=8 format=3 uid="uid://bqy8852r4natm"]
 
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_m4533"]
@@ -97,6 +98,14 @@ texture_region_size = Vector2i(32, 32)
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
 
+=======
+[gd_scene load_steps=6 format=3 uid="uid://mcuvpje1bpyh"]
+
+[ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_m4533"]
+[ext_resource type="Texture2D" uid="uid://caihbd4edlrcx" path="res://images/V2_plateforme.png" id="2_elt8s"]
+[ext_resource type="PackedScene" uid="uid://cx3vgacgsgcp0" path="res://objects/object/Objet_Gravity_l.tscn" id="3_6fs4k"]
+
+>>>>>>> Stashed changes
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okr70"]
 texture = ExtResource("2_elt8s")
 texture_region_size = Vector2i(32, 32)
@@ -194,9 +203,14 @@ resource_local_to_scene = true
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_okr70")
+<<<<<<< Updated upstream
 sources/0 = SubResource("TileSetAtlasSource_k32un")
 
 [node name="monde_test2" type="Node2D"]
+=======
+
+[node name="monde_test3" type="Node2D"]
+>>>>>>> Stashed changes
 scale = Vector2(1.003, 1.0048)
 
 [node name="player" parent="." instance=ExtResource("1_m4533")]
