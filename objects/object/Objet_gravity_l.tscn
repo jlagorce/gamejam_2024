@@ -5,10 +5,11 @@
 [sub_resource type="GDScript" id="GDScript_rkngm"]
 script/source = "extends Node2D
 
-
+var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	player = get_tree().get_root().get_node(\"monde/player\")# Replace with function body.
+	var Global = get_node(\"/root/Global\")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,14 +18,17 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	if body.name  == \"player\":
-		print(\"niveau suivant\")
+	if body == player:
+		Global.power = \"gravity\"
+		Global.current_level += 1
+		get_tree().change_scene_to_file(\"res://objects/niveau\"+str(Global.current_level)+\".tscn\")
+		print(Global.power)
 		 # Replace with function body.
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1gqg"]
 
-[node name="Objet" type="Node2D"]
+[node name="Objet_gravity" type="Node2D"]
 script = SubResource("GDScript_rkngm")
 
 [node name="Area2D" type="Area2D" parent="."]

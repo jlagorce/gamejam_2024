@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://de7cydkrs33hc"]
+
+[ext_resource type="Texture2D" uid="uid://cowm7v3cjyick" path="res://images/icon.svg" id="1_i2k0h"]
+
+[sub_resource type="GDScript" id="GDScript_i6gjl"]
+script/source = "extends Node2D
+
+var player
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	player = get_tree().get_root().get_node(\"monde/player\")# Replace with function body.
+	var Global = get_node(\"/root/Global\")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_area_2d_body_entered(body):
+	if body == player:
+		Global.power = \"movement\"
+		Global.current_level += 1
+		get_tree().change_scene_to_file(\"res://objects/niveau\"+str(Global.current_level)+\".tscn\")
+		print(Global.power)
+		 # Replace with function body.
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1gqg"]
+
+[node name="Objet_movement" type="Node2D"]
+script = SubResource("GDScript_i6gjl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_n1gqg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(4, 2)
+texture = ExtResource("1_i2k0h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
