@@ -1,28 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2e6dchhebnkr"]
+[gd_scene load_steps=8 format=3 uid="uid://d11m0aseo5wc2"]
 
 [ext_resource type="Script" path="res://scripts/niv_1.gd" id="1_ohrga"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_plbdg"]
-[ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="3_fk8co"]
-[ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
-[ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
-[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="6_55u5l"]
-
-[sub_resource type="TileSet" id="TileSet_b6rl2"]
-resource_local_to_scene = true
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+[ext_resource type="PackedScene" path="res://objects/object/Objet_gravity_l.tscn" id="3_fk8co"]
+[ext_resource type="TileSet" uid="uid://1he40ofrx5eh" path="res://objects/tileset1.tres" id="3_ytcux"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
+[ext_resource type="AudioStream" uid="uid://qj7phxidw1y" path="res://sound/ambiances.wav" id="6_iuu23"]
 
 [node name="monde" type="Node2D"]
 scale = Vector2(1.003, 1.0048)
 script = ExtResource("1_ohrga")
 
 [node name="player" parent="." instance=ExtResource("1_plbdg")]
-position = Vector2(12856.4, 1594.35)
+position = Vector2(1058.82, 101.513)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(478.562, 307.525)
 scale = Vector2(4.21632, 4.01794)
-tile_set = SubResource("TileSet_b6rl2")
+tile_set = ExtResource("3_ytcux")
 format = 2
 layer_0/name = "pg"
 layer_1/name = "bg"
@@ -36,11 +32,12 @@ layer_2/tile_data = PackedInt32Array(65537, 131076, 1, 65538, 131076, 1, 65539, 
 position = Vector2(3024.93, -2968.75)
 
 [node name="Objet_movement" parent="." instance=ExtResource("4_t3pqm")]
-position = Vector2(13184.4, -1979.5)
+position = Vector2(13184.4, -2036.23)
 
 [node name="Objet_world" parent="." instance=ExtResource("5_2vw8i")]
 position = Vector2(13134.6, 1775.48)
 
-[node name="ambiance" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_55u5l")
-volume_db = 1.0
+[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1.00082, 1)
+stream = ExtResource("6_iuu23")
+volume_db = 6.0

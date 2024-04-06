@@ -1,12 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://c27o12rxlgi14"]
+[gd_scene load_steps=13 format=3 uid="uid://cglyhiequgqsr"]
 
 [ext_resource type="Script" path="res://scripts/niv_2.gd" id="1_c5rdu"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_m4533"]
-[ext_resource type="Texture2D" uid="uid://cq8f8qou15ocd" path="res://images/Plateforme_monde_alternatif.png" id="2_d0i1u"]
+[ext_resource type="Texture2D" path="res://images/Plateforme_monde_alternatif.png" id="2_d0i1u"]
 [ext_resource type="Texture2D" uid="uid://bxjvpk3sc5em6" path="res://images/V2_plateforme.png" id="2_elt8s"]
-[ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="4_o168a"]
-[ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="5_jrnyg"]
-[ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="6_cm0ph"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_gravity_l.tscn" id="4_o168a"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_movement_l.tscn" id="5_jrnyg"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_world_l.tscn" id="6_cm0ph"]
 [ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="7_1qoi1"]
 [ext_resource type="PackedScene" uid="uid://c8bhlkpkp0xed" path="res://objects/enemie/Ennemi.tscn" id="8_3c5ub"]
 
@@ -120,7 +120,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, 10.5)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
@@ -128,7 +128,7 @@ texture_region_size = Vector2i(32, 32)
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 10.5, 16, 16, -16, 16)
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 16, -16, 16)
 5:1/0 = 0
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0

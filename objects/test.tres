@@ -1,0 +1,6 @@
+[gd_resource type="TileSet" format=3 uid="uid://btjsfvbwcd20x"]
+
+[resource]
+resource_local_to_scene = true
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
