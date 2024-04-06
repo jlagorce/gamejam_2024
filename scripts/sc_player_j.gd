@@ -25,11 +25,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var tile_map = null
 
 var pas = null
+var saut_debut = null
+var saut_fin = null
 
 # Monde
 var timer_switch_world = -1
 
 # Mouvements
+# Saut
+var on_floor_after_jump = true
 # Double saut
 var jump_remaining = 1
 var timer_double_jump = -1
@@ -45,6 +49,12 @@ func _ready():
 	for node in get_children():
 		if node.name == "pas":
 			pas = node
+	for node in get_children():
+		if node.name == "saut_debut":
+			saut_debut = node
+	for node in get_children():
+		if node.name == "saut_fin":
+			saut_fin = node
 	world_power()
 
 func _physics_process(delta):
@@ -90,14 +100,20 @@ func manage_moves(delta):
 func manage_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
 		if (is_on_floor() or is_on_ceiling()) and timer_jump <= 0:
+			on_floor_after_jump = false
+			saut_debut.play()
 			update_y_velocity(delta)
 			timer_jump = TIME_ENTER_JUMP/delta
 	if timer_jump > 0:
 		timer_jump -= 1
-		
+	if is_on_floor() and on_floor_after_jump == false and timer_jump < 10:
+		saut_fin.play()
+		on_floor_after_jump = true
+
 func manage_double_jump(delta):
 	if Input.get_action_strength("ui_up") == 1:
 		if is_on_floor():
+			saut_debut.play()
 			update_y_velocity(delta)
 			timer_double_jump = TIME_DOUBLE_JUMP/delta
 			jump_remaining = NB_JUMP

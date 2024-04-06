@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dolufq8n4hbh2"]
+[gd_scene load_steps=10 format=3 uid="uid://dolufq8n4hbh2"]
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
-[ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
+[ext_resource type="AudioStream" uid="uid://drh51fn8d7dqd" path="res://sound/saut_debut.wav" id="4_02ynv"]
+[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
+[ext_resource type="AudioStream" uid="uid://bd4ljc1awiobx" path="res://sound/saut_fin.wav" id="5_0vhur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v88gk"]
 size = Vector2(57, 108)
@@ -42,9 +44,20 @@ position_smoothing_enabled = true
 
 [node name="pas" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_to8f8")
+volume_db = 6.0
 panning_strength = 2.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_6vfxq")
 animation = &"Run"
+
+[node name="saut_debut" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_02ynv")
+volume_db = 16.0
+panning_strength = 2.0
+
+[node name="saut_fin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0vhur")
+volume_db = 16.0
+panning_strength = 2.0
