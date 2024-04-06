@@ -1,7 +1,6 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dguepshnygtr3"]
 
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://1he40ofrx5eh"]
-
-[ext_resource type="Texture2D" uid="uid://bq8iwblc6ka1u" path="res://images/Loup_garoux_unijambiste (copie).png" id="1_jvbq6"]
+[ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste (copie).png" id="1_jvbq6"]
 [ext_resource type="Texture2D" uid="uid://bxjvpk3sc5em6" path="res://images/V2_plateforme.png" id="1_px4da"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lmf5"]
