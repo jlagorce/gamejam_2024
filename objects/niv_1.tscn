@@ -1,16 +1,48 @@
-[gd_scene load_steps=8 format=3 uid="uid://d11m0aseo5wc2"]
+[gd_scene load_steps=12 format=3 uid="uid://d11m0aseo5wc2"]
 
 [ext_resource type="Script" path="res://scripts/niv_1.gd" id="1_ohrga"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_plbdg"]
-[ext_resource type="PackedScene" path="res://objects/object/Objet_gravity_l.tscn" id="3_fk8co"]
+[ext_resource type="Texture2D" uid="uid://brfcps61frpvd" path="res://images/Fond_de_jeu.png" id="2_pxcxd"]
+[ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="3_fk8co"]
 [ext_resource type="TileSet" uid="uid://1he40ofrx5eh" path="res://objects/tileset1.tres" id="3_ytcux"]
-[ext_resource type="PackedScene" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
-[ext_resource type="PackedScene" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
-[ext_resource type="AudioStream" uid="uid://qj7phxidw1y" path="res://sound/ambiances.wav" id="6_iuu23"]
+[ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
+[ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
+[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="7_mp3ex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2tai"]
+atlas = ExtResource("2_pxcxd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prq74"]
+atlas = ExtResource("2_pxcxd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu7wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2tai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prq74")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="monde" type="Node2D"]
 scale = Vector2(1.003, 1.0048)
 script = ExtResource("1_ohrga")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(3200, 0)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(50, 50)
+sprite_frames = SubResource("SpriteFrames_pu7wd")
 
 [node name="player" parent="." instance=ExtResource("1_plbdg")]
 position = Vector2(1058.82, 101.513)
@@ -37,7 +69,6 @@ position = Vector2(13184.4, -2036.23)
 [node name="Objet_world" parent="." instance=ExtResource("5_2vw8i")]
 position = Vector2(13134.6, 1775.48)
 
-[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1.00082, 1)
-stream = ExtResource("6_iuu23")
+[node name="ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mp3ex")
 volume_db = 6.0
