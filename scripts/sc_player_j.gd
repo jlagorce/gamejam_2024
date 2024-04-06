@@ -102,6 +102,7 @@ func switch_world(delta):
 		timer_switch_world = TIME_SWITCH_WORLD/delta
 	elif timer_switch_world > 0:
 		timer_switch_world -= 1
+		
 func manage_gravity(delta):
 	velocity.y += gravity * gravity_orient * delta
 
