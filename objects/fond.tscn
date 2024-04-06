@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://db2t2t5blspf3"]
+
+[ext_resource type="Texture2D" uid="uid://brfcps61frpvd" path="res://images/Fond_de_jeu.png" id="1_lg0yh"]
+[ext_resource type="Script" path="res://objects/Sprite2D.gd" id="2_6a2y5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2tai"]
+atlas = ExtResource("1_lg0yh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4yut"]
+atlas = ExtResource("1_lg0yh")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu7wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2tai")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4yut")
+}],
+"loop": true,
+"name": &"Parallele",
+"speed": 5.0
+}]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.1)
+motion_mirroring = Vector2(3200, 0)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="ParallaxLayer"]
+position = Vector2(1094, 113)
+scale = Vector2(50, 50)
+sprite_frames = SubResource("SpriteFrames_pu7wd")
+animation = &"Normal"
+script = ExtResource("2_6a2y5")

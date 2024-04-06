@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/sc_player_j.gd" id="1_0hykx"]
 [ext_resource type="AudioStream" uid="uid://gygusvk1s5i8" path="res://sound/pas_herbe2.wav" id="3_to8f8"]
-[ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
+[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="4_siybd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v88gk"]
 size = Vector2(57, 108)
