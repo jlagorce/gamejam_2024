@@ -35,10 +35,11 @@ var jump_remaining = 1
 var timer_double_jump = -1
 # Dash
 var dash_remain = 1
-
+var Sprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var Global = get_node("/root/Global")
+	Sprite = get_node("AnimatedSprite2D")
 	tile_map = get_tree().get_root().get_node("monde/TileMap")
 	for node in get_children():
 		if node.name == "pas":
@@ -48,7 +49,16 @@ func _ready():
 func _physics_process(delta):
 	manage_moves(delta)
 	move_and_slide()
+	animation()
 
+func animation():
+	if is_on_floor():
+		if velocity.x != 0:
+			Sprite.play("Run")
+	if velocity.x > 0:
+		Sprite.scale.x = 4
+	elif velocity.x < 0:
+		Sprite.scale.x = -4
 func gravity_power():
 	pouvoir = "gravity"
 	
