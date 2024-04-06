@@ -35,7 +35,7 @@ var dash_remain = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tile_map = get_tree().get_root().get_node("monde_test2/TileMap")
+	tile_map = get_tree().get_root().get_node("monde/TileMap")
 
 func _physics_process(delta):
 	manage_moves(delta)
