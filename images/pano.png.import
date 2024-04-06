@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq8f8qou15ocd"
-path="res://.godot/imported/Plateforme_monde_alternatif.png-9c78659ba84368637c01d046447b1ce9.ctex"
+uid="uid://78fa3n5wsdll"
+path="res://.godot/imported/pano.png-1747c35cd0d53bd63df1e3c5a616c38b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Plateforme_monde_alternatif.png"
-dest_files=["res://.godot/imported/Plateforme_monde_alternatif.png-9c78659ba84368637c01d046447b1ce9.ctex"]
+source_file="res://images/pano.png"
+dest_files=["res://.godot/imported/pano.png-1747c35cd0d53bd63df1e3c5a616c38b.ctex"]
 
 [params]
 

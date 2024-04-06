@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cap1u"]
 size = Vector2(256.929, 260.979)
 
-[node name="plateform" type="Sprite2D"]
+[node name="plateform2" type="Sprite2D"]
 position = Vector2(1355.5, 198.25)
 scale = Vector2(4.48047, 0.861328)
 texture = ExtResource("1_l4rxh")
