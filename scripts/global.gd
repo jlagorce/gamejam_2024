@@ -18,6 +18,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(current_level)
 	if in_transition == false:
 		for node in parent:
 			if node.name == "ambiance":
