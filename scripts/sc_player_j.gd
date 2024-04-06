@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 36000
 const TIME_DOUBLE_JUMP = 0.5
 const NB_JUMP = 1
 # Dash
-const DASH_VELOCITY = 3000000
+const DASH_VELOCITY = 2000000
 # Gravity
 const TIME_GRAVITY_SWITCH = 3
 
@@ -20,6 +20,7 @@ const TIME_SWITCH_WORLD = 3
 var gravity_orient = 1
 var timer_gravity_switch = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var tile_map = null
 
 # Monde
 var timer_switch_world = -1
@@ -34,7 +35,7 @@ var dash_remain = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	tile_map = get_tree().get_root().get_node("monde_test2/TileMap")
 
 func _physics_process(delta):
 	manage_moves(delta)
@@ -54,7 +55,7 @@ func manage_jump(delta):
 			update_y_velocity(delta)
 			timer_double_jump = TIME_DOUBLE_JUMP/delta
 			jump_remaining = NB_JUMP
-		elif  timer_double_jump <= 0 and jump_remaining > 0 and all_moves == true:
+		elif timer_double_jump <= 0 and jump_remaining > 0 and all_moves == true:
 			velocity.y = 0
 			update_y_velocity(delta)
 			jump_remaining -= 1
@@ -66,8 +67,8 @@ func update_y_velocity(delta):
 
 func switch_world(delta):
 	if Input.is_action_just_pressed("switch_world") and timer_switch_world <= 0:
-		get_tree().get_root().get_node("monde_test2/TileMap").visible = not get_tree().get_root().get_node("monde_test2/TileMap").visible
-		get_tree().get_root().get_node("monde_test2/TileMap2").visible = not get_tree().get_root().get_node("monde_test2/TileMap2").visible
+		tile_map.set_layer_enabled(2, not tile_map.is_layer_enabled(2))
+		tile_map.set_layer_enabled(3, not tile_map.is_layer_enabled(3))
 		timer_switch_world = TIME_SWITCH_WORLD/delta
 	elif timer_switch_world > 0:
 		timer_switch_world -= 1
