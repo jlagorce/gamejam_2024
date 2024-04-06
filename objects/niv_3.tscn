@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="1_a2ybd"]
 [ext_resource type="Script" path="res://scripts/niv_3.gd" id="1_ynwjb"]
-[ext_resource type="Texture2D" path="res://images/Plateforme_monde_alternatif.png" id="2_5crly"]
+[ext_resource type="Texture2D" uid="uid://cq8f8qou15ocd" path="res://images/Plateforme_monde_alternatif.png" id="2_5crly"]
 [ext_resource type="Texture2D" uid="uid://bxjvpk3sc5em6" path="res://images/V2_plateforme.png" id="2_rhovb"]
-[ext_resource type="Texture2D" path="res://images/pano.png" id="3_ok7uc"]
+[ext_resource type="Texture2D" uid="uid://78fa3n5wsdll" path="res://images/pano.png" id="3_ok7uc"]
 [ext_resource type="PackedScene" uid="uid://j2snw4gvmqrn" path="res://objects/object/Objet_gravity_l.tscn" id="5_0rlgu"]
 [ext_resource type="PackedScene" uid="uid://bixupjemegm8f" path="res://objects/object/Objet_movement_l.tscn" id="6_p33dw"]
 [ext_resource type="PackedScene" uid="uid://cjtob41r2jwkg" path="res://objects/object/Objet_world_l.tscn" id="7_pv8y1"]
-[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="8_w1yqa"]
+[ext_resource type="AudioStream" uid="uid://dc1nx77lrihx3" path="res://sound/musique_niveau_3.wav" id="9_627kk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmaap"]
 texture = ExtResource("2_5crly")
@@ -246,5 +246,5 @@ position = Vector2(13160.5, -1948.65)
 position = Vector2(-1952.14, -2734.87)
 
 [node name="ambiance" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_w1yqa")
+stream = ExtResource("9_627kk")
 volume_db = 1.0
