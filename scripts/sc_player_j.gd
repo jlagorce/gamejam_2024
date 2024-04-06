@@ -92,7 +92,7 @@ func manage_jump(delta):
 		if (is_on_floor() or is_on_ceiling()) and timer_jump <= 0:
 			update_y_velocity(delta)
 			timer_jump = TIME_ENTER_JUMP/delta
-	elif timer_jump > 0:
+	if timer_jump > 0:
 		timer_jump -= 1
 		
 func manage_double_jump(delta):
