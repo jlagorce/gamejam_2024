@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://v60wt3uj7fch"]
+[gd_scene load_steps=10 format=3 uid="uid://m7rlc8ygjg0l"]
 
 [ext_resource type="Script" path="res://scripts/niv_1.gd" id="1_qfrc8"]
 [ext_resource type="PackedScene" path="res://objects/fond.tscn" id="2_qio65"]
 [ext_resource type="PackedScene" uid="uid://dolufq8n4hbh2" path="res://objects/player/player.tscn" id="3_vgpo8"]
-[ext_resource type="TileSet" uid="uid://b5l51pv8jtcsi" path="res://objects/tileset1.tres" id="4_07270"]
-[ext_resource type="PackedScene" uid="uid://dtm1ufpmc5ggr" path="res://objects/object/Objet_gravity_l.tscn" id="5_2tk4q"]
-[ext_resource type="PackedScene" uid="uid://de7cydkrs33hc" path="res://objects/object/Objet_movement_l.tscn" id="6_gkisl"]
-[ext_resource type="PackedScene" uid="uid://bqc3x0n3osyg2" path="res://objects/object/Objet_world_l.tscn" id="7_eqs7c"]
+[ext_resource type="TileSet" uid="uid://dguepshnygtr3" path="res://objects/tileset1.tres" id="4_07270"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_gravity_l.tscn" id="5_2tk4q"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_movement_l.tscn" id="6_gkisl"]
+[ext_resource type="PackedScene" path="res://objects/object/Objet_world_l.tscn" id="7_eqs7c"]
 [ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="8_werm3"]
 [ext_resource type="PackedScene" uid="uid://c8bhlkpkp0xed" path="res://objects/paneau/Paneau.tscn" id="9_r7vsq"]
 
