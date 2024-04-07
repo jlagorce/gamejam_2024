@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://bd1nrye7jxc2c"]
+
+[ext_resource type="Script" path="res://scripts/Intro.gd" id="1_p4mlv"]
+[ext_resource type="Texture2D" uid="uid://bq8iwblc6ka1u" path="res://images/Loup_garoux_unijambiste (copie).png" id="2_0xjfb"]
+[ext_resource type="AudioStream" uid="uid://tmmcrew5i35u" path="res://sound/Voix_off_prise_2.wav" id="3_qyrld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojoo6"]
+atlas = ExtResource("2_0xjfb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcwhs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojoo6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_657tg"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_in2wq"]
+font_size = 48
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_p4mlv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(36, 20)
+sprite_frames = SubResource("SpriteFrames_jcwhs")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qyrld")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 576.0
+offset_right = 392.0
+offset_bottom = 643.0
+text = "ESPACE : PASSER"
+label_settings = SubResource("LabelSettings_657tg")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 360.0
+offset_top = 67.0
+offset_right = 968.0
+offset_bottom = 479.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+text = "Par une sombre soirée 
+de printemps, en 
+rentrant chez vous, 
+vous apercevez deux 
+yeux rouge sang dans 
+la pénombre. Avant 
+même que vous ayez 
+le temps de réagir, un 
+énorme loup noir vous 
+saute dessus et plante 
+violemment ses crocs 
+acérés dans votre 
+jambe. Malgré tous vos 
+efforts pour enlever sa 
+mâchoire baveuse de 
+votre jambe, le loup finit 
+ce qu’il a commencé et 
+vous perdez votre jambe. 
+Vous arrivez finalement 
+à faire fuir la bête et 
+rentrez péniblement dans 
+votre village pour vous 
+faire soigner. Malgré les 
+relances incessantes de 
+douleur, vous vous 
+endormez dans votre lit 
+d’hôpital. Cependant, à 
+minuit pile, quand la 
+lune est au plus haut, 
+vous vous réveillez 
+soudainement avec une 
+envie de chair fraiche. 
+En vous regardant dans 
+la vitre, vous n’apercevez 
+non pas votre silhouette 
+mais celle d’un horrible 
+loup-garou. Vous 
+comprenez ainsi que la 
+morsure de ce loup 
+vous a transformé en 
+cette affreuse créature. 
+Par peur de blesser 
+ceux qui vous ont soigné, 
+vous fuyez dans la forêt. 
+De nombreux destins 
+s’offrent maintenant à 
+vous. Voulez-vous 
+essayer de vous habituer 
+à votre nouvelle vie ou 
+bien de retrouver à tout 
+prix celle d’avant. Vous 
+devez maintenant 
+explorer et partir à la 
+recherche d’objets 
+magiques qui vous 
+permettront d’accomplir 
+l’impossible. 
+Bonne chance !"
+label_settings = SubResource("LabelSettings_in2wq")

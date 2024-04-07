@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://1he40ofrx5eh" path="res://objects/tileset1.tres" id="3_ytcux"]
 [ext_resource type="PackedScene" uid="uid://bixupjemegm8f" path="res://objects/object/Objet_movement_l.tscn" id="4_t3pqm"]
 [ext_resource type="PackedScene" uid="uid://cjtob41r2jwkg" path="res://objects/object/Objet_world_l.tscn" id="5_2vw8i"]
-[ext_resource type="AudioStream" uid="uid://bclaew28i7bn4" path="res://sound/musique.wav" id="7_mp3ex"]
+[ext_resource type="AudioStream" uid="uid://dlrh8qcyt4h4m" path="res://sound/Musique_niveau_1.wav" id="8_mjdjn"]
 
 [node name="monde" type="Node2D"]
 scale = Vector2(1.003, 1.0048)
@@ -41,5 +41,5 @@ position = Vector2(13184.4, -2036.23)
 position = Vector2(13134.6, 1775.48)
 
 [node name="ambiance" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_mp3ex")
+stream = ExtResource("8_mjdjn")
 volume_db = 6.0
