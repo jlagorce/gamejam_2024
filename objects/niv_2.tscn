@@ -284,7 +284,7 @@ script = ExtResource("1_c5rdu")
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_cdjc3")]
 
 [node name="player" parent="." instance=ExtResource("1_m4533")]
-position = Vector2(587.238, 415.008)
+position = Vector2(4811.56, -4140.13)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(482.552, 307.524)
@@ -319,8 +319,8 @@ volume_db = 1.0
 position = Vector2(3847.46, -4337.18)
 
 [node name="info_gravite" parent="." instance=ExtResource("8_3c5ub")]
-position = Vector2(-4349.95, 750.398)
-scale = Vector2(2.24351, 2.24351)
+position = Vector2(-3983.05, 1251.99)
+scale = Vector2(1.60667, 1.60667)
 metadata/text = "En choisissant cet objet, vous obtiendrez le pouvoir de retourner complètement les règles de l’univers. Ce don vous permettra certainement d’asseoir votre pouvoir sur le monde des loups-garous…"
 
 [node name="info_monde" parent="." instance=ExtResource("8_3c5ub")]

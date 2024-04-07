@@ -4,7 +4,7 @@ extends CharacterBody2D
 # Mouvement
 # Bases
 const SPEED = 30000
-const JUMP_VELOCITY = 36000
+const JUMP_VELOCITY = 40000
 # Double saut
 const TIME_DOUBLE_JUMP = 0.1
 const TIME_ENTER_JUMP = 1

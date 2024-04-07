@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cp2336kku5tl5"]
+[gd_scene load_steps=6 format=3 uid="uid://cp2336kku5tl5"]
 
 [ext_resource type="Texture2D" uid="uid://bq8iwblc6ka1u" path="res://images/Loup_garoux_unijambiste (copie).png" id="1_0plbg"]
+[ext_resource type="Script" path="res://objects/statut_gravity.gd" id="1_xy1j5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6nlop"]
 atlas = ExtResource("1_0plbg")
@@ -21,6 +22,7 @@ animations = [{
 font_size = 32
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_xy1j5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(585, 256)
