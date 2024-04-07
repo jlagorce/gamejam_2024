@@ -13,7 +13,10 @@ func _ready():
 	
 	if has_meta("text"):
 		$CanvasLayer/RichTextLabel.set_text(get_meta("text"))
-	
+
+func set_text(text):
+	$CanvasLayer/RichTextLabel.set_text(text)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	

@@ -31,7 +31,7 @@ func _on_area_2d_body_entered(body):
 			elif max(Global.gravity,Global.world,Global.movement)==Global.world:
 				get_tree().change_scene_to_file(\"res://objects/fin_world.tscn\")
 		else:
-			get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")
+			get_tree().change_scene_to_file(\"res://objects/statut_world.tscn\")
 		 # Replace with function body.
 "
 

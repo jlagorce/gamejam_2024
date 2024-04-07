@@ -59,3 +59,7 @@ metadata/text = "En choisissant cet objet, vous pourrez vous déplacer à traver
 position = Vector2(11984, -2811.5)
 scale = Vector2(2.40189, 2.40189)
 metadata/text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à être plus mobile..."
+
+[node name="statut_msg" parent="." instance=ExtResource("9_4h4qb")]
+position = Vector2(1185.44, 8603.7)
+scale = Vector2(2.15492, 2.15492)
