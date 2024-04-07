@@ -15,8 +15,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if in_transition == false:
-		for node in parent:
-			if node.name == "ambiance":
-				if node.has_stream_playback() == false:
-					node.play()
+		if parent != null:
+			for node in parent:
+				if node.name == "ambiance":
+					if node.has_stream_playback() == false:
+						node.play()
 	
