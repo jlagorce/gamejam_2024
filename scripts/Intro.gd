@@ -11,8 +11,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	floatScroll += 0.8	
+func _process(delta):
+	floatScroll += 50.0 * delta
 	TexteIntro.scroll_vertical = int(floatScroll)
 	if not VoixOff.is_playing() or Input.is_action_just_pressed("dash"):
 		get_tree().change_scene_to_file("res://objects/niv_1.tscn")

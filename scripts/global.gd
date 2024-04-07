@@ -5,6 +5,9 @@ var respawn_position = Vector2.ZERO
 
 var current_level = 1
 var power = ""
+var world = 0
+var movement = 0
+var gravity = 0
 var parent = null
 var in_transition = false
 

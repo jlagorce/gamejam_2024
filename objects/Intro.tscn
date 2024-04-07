@@ -55,7 +55,9 @@ vertical_scroll_mode = 3
 
 [node name="Label" type="Label" parent="ScrollContainer"]
 layout_mode = 2
-text = "Par une sombre soirée 
+text = "
+
+Par une sombre soirée 
 de printemps, en 
 rentrant chez vous, 
 vous apercevez deux 

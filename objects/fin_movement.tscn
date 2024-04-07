@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://x30stwhm0nub"]
+
+[ext_resource type="Texture2D" uid="uid://bq8iwblc6ka1u" path="res://images/Loup_garoux_unijambiste (copie).png" id="1_icgf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edggn"]
+atlas = ExtResource("1_icgf7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bar0h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edggn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yv6sn"]
+font_size = 32
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(585, 256)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_bar0h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 393.0
+offset_right = 1077.0
+offset_bottom = 582.0
+text = "Vous avez donc choisi au cours de cette aventure de tenter de 
+compenser la perte immense de votre jambe. Et, grâce à ces 
+merveilleux objets magiques, vous avez miraculeusement récupéré 
+votre jambe. Félicitations !"
+label_settings = SubResource("LabelSettings_yv6sn")

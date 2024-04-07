@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://j2snw4gvmqrn"]
 
-[ext_resource type="Texture2D" path="res://images/Loup_garoux_unijambiste.png" id="1_wqp4s"]
+[ext_resource type="Texture2D" uid="uid://wasisg03h57c" path="res://images/Loup_garoux_unijambiste.png" id="1_wqp4s"]
 
 [sub_resource type="GDScript" id="GDScript_rkngm"]
 script/source = "extends Node2D
@@ -22,7 +22,16 @@ func _on_area_2d_body_entered(body):
 		Global.in_transition = true
 		Global.power = \"gravity\"
 		Global.current_level += 1
-		get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")
+		Global.gravity += 1
+		if Global.current_level == 4:
+			if max(Global.gravity,Global.world,Global.movement)==Global.gravity:
+				get_tree().change_scene_to_file(\"res://objects/fin_gravity.tscn\")
+			elif max(Global.gravity,Global.world,Global.movement)==Global.movement:
+				get_tree().change_scene_to_file(\"res://objects/fin_movement.tscn\")
+			elif max(Global.gravity,Global.world,Global.movement)==Global.world:
+				get_tree().change_scene_to_file(\"res://objects/fin_world.tscn\")
+		else:
+			get_tree().change_scene_to_file(\"res://objects/niv_\"+str(Global.current_level)+\".tscn\")
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1gqg"]
