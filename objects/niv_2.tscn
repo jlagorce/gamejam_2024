@@ -321,14 +321,14 @@ position = Vector2(3847.46, -4337.18)
 [node name="info_gravite" parent="." instance=ExtResource("8_3c5ub")]
 position = Vector2(-4349.95, 750.398)
 scale = Vector2(2.24351, 2.24351)
-metadata/text = "En choisissant cet objet, vous obtiendrez le pouvoir de retourner complètement les règles de l’univers. Ce don vous permettra certainement d’assoir votre pouvoir sur le monde des loups-garous…"
+metadata/text = "En choisissant cet objet, vous obtiendrez le pouvoir de retourner complètement les règles de l’univers. Ce don vous permettra certainement d’asseoir votre pouvoir sur le monde des loups-garous…"
 
 [node name="info_monde" parent="." instance=ExtResource("8_3c5ub")]
 position = Vector2(3681.95, -4685.51)
 scale = Vector2(1.23336, 1.21607)
-metadata/text = "En choisissant cet objet, vous pourrez vous déplacer à travers l’espace-temps et vous téléporter dans une dimension parallèle. Peut-être que ce pouvoir vous permettra également d’aller dans une vie parallèle où votre destin n’aurait pas basculé de manière si dramatique… "
+metadata/text = "En choisissant cet objet, vous pourrez vous déplacer à travers l’espace-temps et vous téléporter dans une dimension parallèle. Peut-être que ce pouvoir vous permettra également d’aller dans une vie parallèle..."
 
 [node name="info_mvmt" parent="." instance=ExtResource("8_3c5ub")]
 position = Vector2(7269.19, -542.396)
 scale = Vector2(2.40189, 2.40189)
-metadata/text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à remplacer votre jambe…"
+metadata/text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à être plus mobile..."

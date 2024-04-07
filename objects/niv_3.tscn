@@ -322,9 +322,9 @@ metadata/text = "En choisissant cet objet, vous obtiendrez le pouvoir de retourn
 [node name="info_monde" parent="." instance=ExtResource("11_r8fu3")]
 position = Vector2(7774.68, -49.7611)
 scale = Vector2(2.15492, 2.15492)
-metadata/text = "En choisissant cet objet, vous pourrez vous déplacer à travers l’espace-temps et vous téléporter dans une dimension parallèle. Peut-être que ce pouvoir vous permettra également d’aller dans une vie parallèle où votre destin n’aurait pas basculé de manière si dramatique… "
+metadata/text = "En choisissant cet objet, vous pourrez vous déplacer à travers l’espace-temps et vous téléporter dans une dimension parallèle. Peut-être que ce pouvoir vous permettra également d’aller dans une vie parallèle..."
 
 [node name="info_mvmt" parent="." instance=ExtResource("11_r8fu3")]
 position = Vector2(11755.7, -2802.55)
 scale = Vector2(2.96045, 2.96045)
-metadata/text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à remplacer votre jambe…"
+metadata/text = "En choisissant cet objet, vous pourrez transcender les limites humaines et vous déplacer dans l’air. Je suis sûr que ce pouvoir vous aidera à être plus mobile..."
